@@ -127,19 +127,7 @@ def ngrok():
 	global subdom
 	flag = False
 
-	print(G + '[+]' + C + ' Checking Serveo Status...', end='')
-
-	trytime.sleep(1)
-		rqst = requests.get('https://ngrok.com', timeout=5)
-		sc = rqst.status_code
-		if sc == 200:
-			print(C + '[' + G + ' Online ' + C + ']' + W + '\n')
-		else:
-			print(C + '[' + R + 'Status : {}'.format(sc) + C + ']' + W + '\n')
-			exit()
-	except requests.ConnectionError:
-		print(C + '[' + R + ' Offline ' + C + ']' + W + '\n')
-		exit()
+	
 			
 	print(G + '[+]' + C + ' Getting Serveo URL...' + W + '\n')
 	if subdom is None:
